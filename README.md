@@ -4,7 +4,7 @@
 - [Requisitos](#Requisitos)
 - [Vista de Lógica/Diseño](#Vista de Lógica/Diseño)
   - [Arquitectura](#Arquitectura)
-  - [Paquetes](#Paquetes)
+  - [Paquetes](#Paquetes Mastermind)
 - [Vista de Desarrollo/Implementación](#Vista de Desarrollo/Implementación)
 
 ## Requisitos
