@@ -8,9 +8,15 @@
 - [Vista de Desarrollo/Implementación](#Vista-de-Desarrollo/Implementación)
 
 ## Requisitos
+- Funcionalidad: Básica
+- Interfaz: Texto         
+- Distribución: Standalone  
+- Persistencia: No     
+
 ![mastermaind](/Mastermind/Documentation/mastermind.jpeg)
 
 ## Vista de Lógica/Diseño
+
 ### Arquitectura
 ![Arquitectura](/Mastermind/Documentation/Arquitectura.PNG)
 
