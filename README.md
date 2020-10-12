@@ -2,10 +2,10 @@
 
 #### Index
 - [Requisitos](#Requisitos)
-- [Vista de Lógica/Diseño](#Vista de Lógica/Diseño)
+- [Vista de Lógica/Diseño](#Vista-de-Lógica/Diseño)
   - [Arquitectura](#Arquitectura)
-  - [Paquetes](#Paquetes Mastermind)
-- [Vista de Desarrollo/Implementación](#Vista de Desarrollo/Implementación)
+  - [Paquetes](#Paquetes-Mastermind)
+- [Vista de Desarrollo/Implementación](#Vista-de-Desarrollo/Implementación)
 
 ## Requisitos
 ![mastermaind](/Mastermind/Documentation/mastermind.jpeg)
