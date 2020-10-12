@@ -6,6 +6,8 @@
   - [Arquitectura](#Arquitectura)
   - [Paquetes](#Paquetes-Mastermind)
 - [Vista de Desarrollo/Implementación](#Vista-de-DesarrolloImplementación)
+- [Vista de Despliegue/Física](#Vista-de-DespliegueFísica)
+- [Vista de Procesos](#Vista-de-Procesos)
 
 ## Requisitos
 - Funcionalidad: Básica
@@ -24,4 +26,10 @@
 ![Paquetes](/Mastermind/Documentation/clasesDiseño.png)
 
 ## Vista de Desarrollo/Implementación
-![Vista](/Mastermind/Documentation/umlVD.PNG)
+![DI](/Mastermind/Documentation/umlVD.PNG)
+
+## Vista de Despliegue/Física
+![DF](/Mastermind/Documentation/umlDF.PNG)
+
+## Vista de Procesos
+- No hay concurrencia
