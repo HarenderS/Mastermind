@@ -1,5 +1,12 @@
 # Mastermind
 
+#### Index
+Requisitos
+Vista de Lógica/Diseño
+  Arquitectura
+  Paquetes
+Vista de Desarrollo/Implementación
+
 ## Requisitos
 ![mastermaind](/Mastermind/Documentation/mastermind.jpeg)
 
