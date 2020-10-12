@@ -2,10 +2,10 @@
 
 #### Index
 - [Requisitos](#Requisitos)
-- [Vista de Lógica/Diseño](#Vista-de-Lógica-Diseño)
+- [Vista de Lógica/Diseño](#Vista-de-LógicaDiseño)
   - [Arquitectura](#Arquitectura)
   - [Paquetes](#Paquetes-Mastermind)
-- [Vista de Desarrollo/Implementación](#Vista-de-Desarrollo-/-Implementación)
+- [Vista de Desarrollo/Implementación](#Vista-de-DesarrolloImplementación)
 
 ## Requisitos
 - Funcionalidad: Básica
