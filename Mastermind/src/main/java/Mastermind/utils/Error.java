@@ -9,10 +9,10 @@ public enum Error {
 
 	private String message;
 
-	Error(){
+	private Error(){
 	}
 
-	Error(String message){
+	private Error(String message){
 		this.message = message;
 	}
 

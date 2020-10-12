@@ -2,10 +2,14 @@ package Mastermind.Mastermind;
 
 public class CodeBreaker extends Player{
 
-	private SecretCombination secretCoombination;
+private ProposedCombination proposedCombination;
 	
 	public CodeBreaker(Board board) {
 		super(board);
-		this.secretCoombination = board.getSecretCombination();
+		this.proposedCombination = board.getProposedCombination();
+	}
+
+	public ProposedCombination getProposedCombination() {
+		return proposedCombination;
 	}
 }

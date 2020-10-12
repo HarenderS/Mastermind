@@ -7,7 +7,7 @@ import Mastermind.utils.Color;
 
 public class Combination {
 
-	List<Color> combination;
+	public List<Color> combination;
 	
 	public Combination() {
 		this.combination = new ArrayList<Color>();

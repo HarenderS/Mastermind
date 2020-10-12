@@ -1,6 +1,5 @@
 package Mastermind.Mastermind;
 
-import Mastermind.utils.Console;
 import Mastermind.utils.Message;
 import Mastermind.utils.YesNoDialog;
 

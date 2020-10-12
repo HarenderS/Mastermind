@@ -2,10 +2,15 @@ package Mastermind.Mastermind;
 
 public class CodeMaker extends Player{
 	
-	private ProposedCombination proposedCombination;
+	private SecretCombination secretCoombination;
 	
 	public CodeMaker(Board board) {
 		super(board);
-		this.proposedCombination = board.getProposedCombination();
+		this.secretCoombination = board.getSecretCombination();
 	}
+
+	public SecretCombination getSecretCoombination() {
+		return secretCoombination;
+	}
+	
 }
