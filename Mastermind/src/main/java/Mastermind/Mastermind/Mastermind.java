@@ -1,44 +1,24 @@
 package Mastermind.Mastermind;
 
-import Mastermind.utils.Message;
-import Mastermind.utils.YesNoDialog;
+import Mastermind.Mastermind.Views.MastermindView;
+import Mastermind.Mastermind.models.Board;
 
 public class Mastermind {
+
 	private Board board;
-	private Turn turn;
-	
-	private void play() {
-		do {
-			this.playGame();
-		}while(this.isResumedGame());
-	}
-	
-	private void playGame() {
-		Message.TITLE.writeln();
-		Message.SECRET.writeln();
+	private MastermindView mastermindView;
+
+	private Mastermind() {
 		this.board = new Board();
-		this.turn = new Turn(this.board);
-		do {
-			this.board.writeln();
-			this.turn.play();
-		} while (!this.board.isFinished());
-		Message finalMessage = Message.LOOSER;
-		if (this.board.isWinner()) {
-			finalMessage = Message.WINNER;
-		}
-		
-		finalMessage.writeln();
-		this.board.writeFinalCombination();
+		this.mastermindView = new MastermindView(this.board);
 	}
 
-	private boolean isResumedGame() {
-		return new YesNoDialog().read(Message.RESUME.toString());
+	private void play() {
+		this.mastermindView.play();
 	}
 
 	public static void main(String[] args) {
 		new Mastermind().play();
 	}
 
-
-	
 }
