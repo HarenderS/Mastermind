@@ -5,8 +5,8 @@
 - [Vista de Lógica/Diseño](#Vista-de-LógicaDiseño)
   - [Arquitectura](#Arquitectura)
   - [Paquetes Mastermind](#Paquetes-Mastermind)
-  - [Paquete tictactoe.models](#Paquete-tictactoemodels)
-  - [Paquete tictactoe.views](#Paquete-tictactoeviews)
+  - [Paquete mastermind.models](#Paquete-mastermindemodels)
+  - [Paquete mastermind.views](#Paquete-mastermindviews)
   - [Paquete utils](#Paquete-utils)
 - [Vista de Desarrollo/Implementación](#Vista-de-DesarrolloImplementación)
 - [Vista de Despliegue/Física](#Vista-de-DespliegueFísica)
@@ -28,7 +28,7 @@
 ### Paquetes Mastermind
 ![PaquetesM](/Mastermind/Documentation/paqueteMastermind.PNG)
 
-### Paquete tictactoe.models
+### Paquete mastermind.models
 ![PaquetesModel](/Mastermind/Documentation/paqueteModel.PNG)
 
 ### Paquete mastermind.views
