@@ -12,6 +12,11 @@ public class ProposedCombination extends Combination{
 		return this.combination.contains(color);
 	}
 	
+	public String toString() {
+		return this.combination.toString();
+		
+	}
+	
 	public List<Color> getColors(){
 		return this.combination;
 	}

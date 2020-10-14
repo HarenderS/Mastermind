@@ -33,7 +33,6 @@ public class SecretCombination extends Combination{
 	
 	public String toString() {
 		return this.combination.toString();
-		
 	}
 	
 	public List<Color> getColors(){

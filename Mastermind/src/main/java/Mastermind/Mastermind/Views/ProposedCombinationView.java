@@ -30,7 +30,7 @@ public class ProposedCombinationView {
 			return Error.WRONG_LENGTH;
 		}
 		for (int i = 0; i < characters.length(); i++) {
-			Color color = Color.getInstance(characters.charAt(i));
+			Color color = ColorView.getInstance(characters.charAt(i));
 			if (color.isNull()) {
 				return Error.WRONG_CHARACTERS;
 			}
@@ -44,7 +44,7 @@ public class ProposedCombinationView {
 
 	public void write() {
 		for (Color color : this.proposedCombination.getColors()) {
-			color.write();
+			new ColorView(color).write();
 		}
 	}
 }

@@ -27,22 +27,16 @@ public class BoardView {
 		Message.ATTEMPED.writeln(this.board.getActualIntent()+1);
 	
 		if (this.board.isWinner()) {
-			Message.WINNER.writeln(this.board.getSecretCombination().toString(), proposedCombination.getColors().toString());
+			Message.WINNER.writeln(this.board.getSecretCombination().toString(), proposedCombination.toString());
 			return;
 		}
 		
 		if (this.board.isLoser()) {
-			Message.WINNER.writeln(this.board.getSecretCombination().toString(), proposedCombination.getColors().toString());
+			Message.WINNER.writeln(this.board.getSecretCombination().toString(), proposedCombination.toString());
 			return;
 		}
 		
 		
 	}
-
-	public void writeln() {
-		
-	}
-	
-	
 
 }
