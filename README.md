@@ -5,8 +5,8 @@
 - [Vista de Lógica/Diseño](#Vista-de-LógicaDiseño)
   - [Arquitectura](#Arquitectura)
   - [Paquetes Mastermind](#Paquetes-Mastermind)
-  - [Paquete mastermind.models](#Paquete-mastermindemodels)
-  - [Paquete mastermind.views](#Paquete-mastermindviews)
+  - [Paquete mastermind.models](#Paquete-Mastermindmodels)
+  - [Paquete mastermind.views](#Paquete-Mastermindviews)
   - [Paquete utils](#Paquete-utils)
 - [Vista de Desarrollo/Implementación](#Vista-de-DesarrolloImplementación)
 - [Vista de Despliegue/Física](#Vista-de-DespliegueFísica)
@@ -28,10 +28,10 @@
 ### Paquetes Mastermind
 ![PaquetesM](/Mastermind/Documentation/paqueteMastermind.PNG)
 
-### Paquete mastermind.models
+### Paquete Mastermind.models
 ![PaquetesModel](/Mastermind/Documentation/paqueteModel.PNG)
 
-### Paquete mastermind.views
+### Paquete Mastermind.views
 ![PaquetesView](/Mastermind/Documentation/paqueteView.PNG)
 
 ### Paquete utils
