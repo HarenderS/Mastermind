@@ -37,11 +37,15 @@ public enum Message {
 		Console.instance().writeln(this.message.replaceFirst("#secrets", secrets).replaceFirst("#proposel", proposel));
 	}
 	
-	void writeln(int blacks, int whites) {
+	public void writeln(int blacks, int whites) {
 		assert this == Message.RESULT;
 		Console.instance().writeln(this.message.replaceFirst("#blacks", "" + blacks).replaceFirst("#whites", "" + whites));
 	}
 
+	public String write(String secrets, String proposel) {
+		assert this == WINNER || this == LOOSER;
+		return this.message.replaceFirst("#secrets", secrets).replaceFirst("#proposel", proposel);
+	}
 	
 	public void writeln() {
 		Console.instance().writeln(this.message);
@@ -49,6 +53,10 @@ public enum Message {
 
 	@Override
 	public String toString() {
+		return this.message;
+	}
+	
+	public String getMessage() {
 		return this.message;
 	}
 }
