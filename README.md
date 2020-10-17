@@ -25,7 +25,7 @@
 ## Vista de Lógica/Diseño
 
 ### Arquitectura
-![Arquitectura](/Mastermind/Documentation/dv.withFactoryMethod/paqueteModel.PNG)
+![Arquitectura](/Mastermind/Documentation/dv.withFactoryMethod/Arquitectura.PNG)
 
 ### Paquetes Mastermind
 ![PaquetesM](/Mastermind/Documentation/dv.withFactoryMethod/paqueteMastermind.PNG)
