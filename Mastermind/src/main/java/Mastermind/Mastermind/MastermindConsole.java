@@ -3,22 +3,16 @@ package Mastermind.Mastermind;
 import Mastermind.Mastermind.Views.console.MastermindView;
 import Mastermind.Mastermind.models.Board;
 
-public class MastermindConsole {
+public class MastermindConsole extends Mastermind{
 
-	private Board board;
-	private MastermindView mastermindView;
-
-	private MastermindConsole() {
-		this.board = new Board();
-		this.mastermindView = new MastermindView(this.board);
+	@Override
+	protected MastermindView createView(Board board) {
+		return new MastermindView(board);
 	}
-
-	private void play() {
-		this.mastermindView.interact();
-	}
-
+	
 	public static void main(String[] args) {
 		new MastermindConsole().play();
 	}
+
 
 }
