@@ -16,4 +16,6 @@ public abstract class Controller {
 	public void nextState() {
 		this.state.next();
 	}
+	
+	public abstract void accept(ControllerVisitor controllerVisitor);
 }

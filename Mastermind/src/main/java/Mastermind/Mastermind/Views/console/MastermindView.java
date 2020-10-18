@@ -2,10 +2,11 @@ package Mastermind.Mastermind.Views.console;
 
 import Mastermind.Mastermind.controllers.BoardController;
 import Mastermind.Mastermind.controllers.Controller;
+import Mastermind.Mastermind.controllers.ControllerVisitor;
 import Mastermind.Mastermind.controllers.ResumeController;
 import Mastermind.Mastermind.controllers.StartController;
 
-public class MastermindView extends Mastermind.Mastermind.Views.MastermindView {
+public class MastermindView extends Mastermind.Mastermind.Views.MastermindView implements ControllerVisitor {
 
 	private StartView startView;
 	private BoardView boardView;
@@ -19,12 +20,18 @@ public class MastermindView extends Mastermind.Mastermind.Views.MastermindView {
 
 	@Override
 	public void interact(Controller controller) {
-		if (controller instanceof StartController) {
-			this.startView.start((StartController) controller);
-		} else if (controller instanceof BoardController) {
-			this.boardView.play((BoardController) controller);
-			} else {
-				this.resumeView.resume((ResumeController) controller);
-			}
+		controller.accept(this);
+	}
+
+	public void visit(StartController startController) {
+		this.startView.start(startController);
+	}
+
+	public void visit(BoardController boardController) {
+		this.boardView.play(boardController);
+	}
+
+	public void visit(ResumeController resumeController) {
+		this.resumeView.resume(resumeController);
 	}
 }

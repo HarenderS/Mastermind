@@ -33,7 +33,7 @@ public class BoardView {
 		}
 
 		if (boardController.isLoser()) {
-			Message.WINNER.writeln(boardController.getSecretCombination().toString(), proposedCombination.toString());
+			Message.LOOSER.writeln(boardController.getSecretCombination().toString(), proposedCombination.toString());
 			return;
 		}
 

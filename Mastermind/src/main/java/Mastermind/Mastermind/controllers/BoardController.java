@@ -44,4 +44,9 @@ public class BoardController extends Controller{
 		return this.board.getResult(i);
 	}
 
+	@Override
+	public void accept(ControllerVisitor controllerVisitor) {
+		controllerVisitor.visit(this);
+	}
+
 }
