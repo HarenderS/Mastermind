@@ -17,9 +17,9 @@ public class MainController {
 		this.board = new Board();
 		this.state = new State();
 		this.controllers = new HashMap<StateValue, Controller>();
-	    this.controllers.put(StateValue.INITIAL, new StartController(this.board, this.state));
-	    this.controllers.put(StateValue.STARTGAME, new BoardController(this.board, this.state));
-	    this.controllers.put(StateValue.RESUME, new ResumeController(this.board, this.state));
+	    this.controllers.put(StateValue.STARTED, new StartController(this.board, this.state));
+	    this.controllers.put(StateValue.PLAYED, new BoardController(this.board, this.state));
+	    this.controllers.put(StateValue.FINISHED, new ResumeController(this.board, this.state));
 	    this.controllers.put(StateValue.EXIT, null);
 	}
 	

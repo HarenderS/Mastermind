@@ -1,9 +1,9 @@
 package Mastermind.Mastermind.models;
 
 public enum StateValue {
-  INITIAL,
-  STARTGAME,
-  RESUME,
+  STARTED,
+  PLAYED,
+  FINISHED,
   EXIT;
   
 }
