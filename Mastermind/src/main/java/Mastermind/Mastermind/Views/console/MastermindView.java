@@ -1,7 +1,6 @@
 package Mastermind.Mastermind.Views.console;
 
-import Mastermind.Mastermind.controllers.BoardController;
-import Mastermind.Mastermind.controllers.ResumeController;
+import Mastermind.Mastermind.controllers.MainController;
 
 public class MastermindView extends Mastermind.Mastermind.Views.MastermindView {
 
@@ -9,10 +8,10 @@ public class MastermindView extends Mastermind.Mastermind.Views.MastermindView {
 	private BoardView boardView;
 	private ResumeView resumeView;
 
-	public MastermindView(BoardController boardController, ResumeController resumeController) {
+	public MastermindView(MainController mainController) {
 		this.startView = new StartView();
-		this.boardView = new BoardView(boardController);
-		this.resumeView = new ResumeView(resumeController);
+		this.boardView = new BoardView(mainController);
+		this.resumeView = new ResumeView(mainController);
 	}
 
 	@Override
