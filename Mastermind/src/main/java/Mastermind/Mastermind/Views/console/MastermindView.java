@@ -1,25 +1,23 @@
 package Mastermind.Mastermind.Views.console;
 
-import Mastermind.Mastermind.models.Board;
+import Mastermind.Mastermind.controllers.BoardController;
+import Mastermind.Mastermind.controllers.ResumeController;
 
-public class MastermindView extends Mastermind.Mastermind.Views.MastermindView{
+public class MastermindView extends Mastermind.Mastermind.Views.MastermindView {
 
 	private StartView startView;
 	private BoardView boardView;
 	private ResumeView resumeView;
-	
-	public MastermindView(Board board) {
-		super(board);
+
+	public MastermindView(BoardController boardController, ResumeController resumeController) {
 		this.startView = new StartView();
-		this.boardView = new BoardView(this.board);
-		this.resumeView = new ResumeView(this.board);
+		this.boardView = new BoardView(boardController);
+		this.resumeView = new ResumeView(resumeController);
 	}
-	
+
 	@Override
 	protected void play() {
-		do {
-			this.boardView.play();;
-		} while (!this.board.isFinished());
+		this.boardView.play();
 	}
 
 	@Override
@@ -31,5 +29,5 @@ public class MastermindView extends Mastermind.Mastermind.Views.MastermindView{
 	protected boolean resume() {
 		return this.resumeView.resume();
 	}
-	
+
 }

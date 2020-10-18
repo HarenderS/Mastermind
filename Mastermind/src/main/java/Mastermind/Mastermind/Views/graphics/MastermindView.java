@@ -1,5 +1,7 @@
 package Mastermind.Mastermind.Views.graphics;
 
+import Mastermind.Mastermind.controllers.BoardController;
+import Mastermind.Mastermind.controllers.ResumeController;
 import Mastermind.Mastermind.models.Board;
 
 public class MastermindView extends Mastermind.Mastermind.Views.MastermindView{
@@ -9,10 +11,9 @@ public class MastermindView extends Mastermind.Mastermind.Views.MastermindView{
 	private ResumeView resumeView;
 	
 	
-	public MastermindView(Board board) {
-		super(board);
+	public MastermindView(BoardController boardController, ResumeController resumeController) {
 		this.startView = new StartView();
-//		this.boardView = new BoardView(this.board);
+//		this.boardView = new BoardView(this.boardController);
 	}
 
 	@Override
@@ -31,7 +32,7 @@ public class MastermindView extends Mastermind.Mastermind.Views.MastermindView{
 	@Override
 	protected boolean resume() {
 		if (new ResumeView().isResumedGame()) {
-			this.board.reStartBoard();
+//			this.board.reStartBoard();
 			return true;
 		}
 //		this.boardView.setVisible(false);

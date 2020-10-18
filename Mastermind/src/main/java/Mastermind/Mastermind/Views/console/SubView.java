@@ -1,14 +1,14 @@
 package Mastermind.Mastermind.Views.console;
 
-import Mastermind.Mastermind.models.Board;
+import Mastermind.Mastermind.controllers.Controller;
 
 public class SubView {
 
-	protected Board board;
+	protected Controller controller;
 
-	SubView(Board board) {
-		assert board != null;
+	SubView(Controller controller) {
+		assert controller != null;
 		
-		this.board = board;
+		this.controller = controller;
   }
 }

@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import Mastermind.Mastermind.Views.Message;
 import Mastermind.Mastermind.Views.console.ProposedCombinationView;
 import Mastermind.Mastermind.Views.console.ResultView;
+import Mastermind.Mastermind.controllers.BoardController;
 import Mastermind.Mastermind.models.Board;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.utils.Console;
@@ -16,14 +17,14 @@ import Mastermind.utils.Console;
 @SuppressWarnings("serial")
 public class BoardView extends JFrame {
 	
-	private Board board;
+	private BoardController boardController;
 	private final JLabel label;
 	private final JButton button;
 	private static final String SUBMIT = "Submit";
 
 	
-	public BoardView(Board board) {
-		this.board = board;
+	public BoardView(BoardController boardController) {
+		this.boardController = boardController;
 		this.getContentPane().setLayout(new GridBagLayout());
         this.setSize(400, 500);
         this.setLocationRelativeTo(null);
@@ -35,24 +36,24 @@ public class BoardView extends JFrame {
 	public void play() {
 		ProposedCombination proposedCombination = new ProposedCombination();
 //		this.setVisible(true);
-		Message.ATTEMPED.writeln(this.board.getActualIntent()+1);
+		Message.ATTEMPED.writeln(this.boardController.getActualIntent()+1);
 		ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombination);
 		proposedCombinationView.readCombination();
-		this.board.addAndProcess(proposedCombination);	
-		for (int i = 0; i < this.board.getActualIntent(); i++) {
-			new ProposedCombinationView(this.board.getProposedCombination(i)).write();
-			new ResultView(this.board.getResult(i)).writeln();
+		this.boardController.addAndProcess(proposedCombination);	
+		for (int i = 0; i < this.boardController.getActualIntent(); i++) {
+			new ProposedCombinationView(this.boardController.getProposedCombination(i)).write();
+			new ResultView(this.boardController.getResult(i)).writeln();
 		}
 		Console.instance().writeln();
 	
-		if (this.board.isWinner()) {
-			this.getContentPane().add(new JLabel(Message.WINNER.write(this.board.getSecretCombination().toString(), proposedCombination.toString())),
+		if (this.boardController.isWinner()) {
+			this.getContentPane().add(new JLabel(Message.WINNER.write(this.boardController.getSecretCombination().toString(), proposedCombination.toString())),
 					new Constraints(0, 1, 4, 1));
 			return;
 		}
 		
-		if (this.board.isLoser()) {
-			this.getContentPane().add(new JLabel(Message.WINNER.write(this.board.getSecretCombination().toString(), proposedCombination.toString())),
+		if (this.boardController.isLoser()) {
+			this.getContentPane().add(new JLabel(Message.WINNER.write(this.boardController.getSecretCombination().toString(), proposedCombination.toString())),
 					new Constraints(0, 1, 4, 1));
 			return;
 		}

@@ -6,6 +6,7 @@
   - [Arquitectura](#Arquitectura)
   - [Paquetes Mastermind](#Paquetes-Mastermind)
   - [Paquete mastermind.models](#Paquete-Mastermindmodels)
+  - [Paquete mastermind.controllers](#Paquete-Mastermindcontrollers)
   - [Paquete mastermind.views](#Paquete-Mastermindviews)
   - [Paquete mastermind.views.console](#Paquete-Mastermindviewsconsole)
   - [Paquete mastermind.views.graphics](#Paquete-Mastermindviewsgraphics)
@@ -20,36 +21,39 @@
 - Distribución: Standalone  
 - Persistencia: No     
 
-![mastermaind](/Mastermind/Documentation/mastermind.jpeg)
+![mastermaind](/Mastermind/Documentation/modelViewPresenter.presentationModel/mastermind.jpeg)
 
 ## Vista de Lógica/Diseño
 
 ### Arquitectura
-![Arquitectura](/Mastermind/Documentation/dv.withFactoryMethod/Arquitectura.PNG)
+![Arquitectura](/Mastermind/Documentation/modelViewPresenter.presentationModel/Arquitectura.PNG)
 
 ### Paquetes Mastermind
-![PaquetesM](/Mastermind/Documentation/dv.withFactoryMethod/paqueteMastermind.PNG)
+![PaquetesM](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteMastermind.PNG)
 
 ### Paquete Mastermind.models
-![PaquetesModel](/Mastermind/Documentation/dv.withFactoryMethod/paqueteModel.PNG)
+![PaquetesModel](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteModel.PNG)
+
+### Paquete Mastermind.controllers
+![PaquetesView](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteControllers.PNG)
 
 ### Paquete Mastermind.views
-![PaquetesView](/Mastermind/Documentation/dv.withFactoryMethod/paqueteView.PNG)
+![PaquetesView](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteView.PNG)
 
 ### Paquete Mastermind.views.console
-![PaquetesView](/Mastermind/Documentation/dv.withFactoryMethod/paqueteViewConsole.PNG)
+![PaquetesView](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteViewConsole.PNG)
 
 ### Paquete Mastermind.views.graphics
-![PaquetesView](/Mastermind/Documentation/dv.withFactoryMethod/paqueteViewGraphics.PNG)
+![PaquetesView](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteViewGraphics.PNG)
 
 ### Paquete utils
-![PaquetesUtils](/Mastermind/Documentation/dv.withFactoryMethod/paqueteUtils.PNG)
+![PaquetesUtils](/Mastermind/Documentation/modelViewPresenter.presentationModel/paqueteUtils.PNG)
 
 ## Vista de Desarrollo/Implementación
-![DI](/Mastermind/Documentation/dv.withFactoryMethod/umlVD.PNG)
+![DI](/Mastermind/Documentation/modelViewPresenter.presentationModel/umlVD.PNG)
 
 ## Vista de Despliegue/Física
-![DF](/Mastermind/Documentation/dv.withFactoryMethod/umlDF.PNG)
+![DF](/Mastermind/Documentation/modelViewPresenter.presentationModel/umlDF.PNG)
 
 ## Vista de Procesos
 - No hay concurrencia

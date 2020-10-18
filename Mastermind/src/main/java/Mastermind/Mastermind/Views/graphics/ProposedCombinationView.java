@@ -20,6 +20,7 @@ import Mastermind.Mastermind.models.Error;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.utils.Console;
 
+@SuppressWarnings("serial")
 public class ProposedCombinationView extends JFrame implements ActionListener, KeyListener  {
 
 	private ProposedCombination proposedCombination;
