@@ -1,15 +1,8 @@
 package Mastermind.Mastermind.Views;
 
+import Mastermind.Mastermind.controllers.Controller;
+
 public abstract class MastermindView {
 
-	public void interact() {
-		do {
-			this.start();
-			this.play();
-		} while (this.resume());
-	}
-
-	protected abstract void start();
-	protected abstract void play();
-	protected abstract boolean resume();
+	public abstract void interact(Controller controller);
 }

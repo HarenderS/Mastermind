@@ -1,20 +1,21 @@
 package Mastermind.Mastermind.Views.console;
 
 import Mastermind.Mastermind.Views.Message;
-import Mastermind.Mastermind.controllers.MainController;
+import Mastermind.Mastermind.controllers.ResumeController;
 import Mastermind.utils.YesNoDialog;
 
-public class ResumeView extends SubView{
+public class ResumeView{
 
 	
-	public ResumeView(MainController mainController) {
-		super(mainController);
+	public ResumeView() {
 	}
 	
-	public boolean resume() {
+	public boolean resume(ResumeController resumeController) {
 		boolean resume = new YesNoDialog().read(Message.RESUME.toString());
 		if (resume) {
-			this.mainController.resume();;
+			resumeController.resume();
+		}else {
+			resumeController.nextState();
 		}
 		return resume;
 	}

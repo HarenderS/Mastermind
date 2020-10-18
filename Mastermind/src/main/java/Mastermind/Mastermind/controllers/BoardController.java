@@ -4,11 +4,12 @@ import Mastermind.Mastermind.models.Board;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.Mastermind.models.Result;
 import Mastermind.Mastermind.models.SecretCombination;
+import Mastermind.Mastermind.models.State;
 
 public class BoardController extends Controller{
 
-	public BoardController(Board board) {
-		super(board);
+	public BoardController(Board board, State state) {
+		super(board, state);
 	}
 	
 	public void addAndProcess(ProposedCombination proposedCombination) {

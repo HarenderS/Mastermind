@@ -1,6 +1,7 @@
 package Mastermind.Mastermind;
 
 import Mastermind.Mastermind.Views.MastermindView;
+import Mastermind.Mastermind.controllers.Controller;
 import Mastermind.Mastermind.controllers.MainController;
 
 public abstract class Mastermind {
@@ -10,13 +11,19 @@ public abstract class Mastermind {
 
 	protected Mastermind() {
 		this.mainController = new MainController();
-		this.mastermindView = this.createView(this.mainController);
+		this.mastermindView = this.createView();
 	}
 
-	protected abstract MastermindView createView(MainController mainController);
+	protected abstract MastermindView createView();
 
 	protected void play() {
-		this.mastermindView.interact();
-	}
+		Controller controller;
+		do {
+            controller = this.mainController.getController();
+            if (controller != null) {
+                this.mastermindView.interact(controller);
+            }
+		} while (controller != null);
+    }
 
 }

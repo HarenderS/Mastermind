@@ -1,57 +1,31 @@
 package Mastermind.Mastermind.controllers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import Mastermind.Mastermind.models.Board;
-import Mastermind.Mastermind.models.ProposedCombination;
-import Mastermind.Mastermind.models.Result;
-import Mastermind.Mastermind.models.SecretCombination;
+import Mastermind.Mastermind.models.State;
+import Mastermind.Mastermind.models.StateValue;
 
 public class MainController {
 
 	private Board board;
-	private BoardController boardController;
-	private ResumeController resumeController;	
+	private State state;
+	private Map<StateValue, Controller> controllers;
 	
 	public MainController() {
 		this.board = new Board();
-		this.boardController = new BoardController(this.board);
-		this.resumeController = new ResumeController(this.board);
+		this.state = new State();
+		this.controllers = new HashMap<StateValue, Controller>();
+	    this.controllers.put(StateValue.INITIAL, new StartController(this.board, this.state));
+	    this.controllers.put(StateValue.STARTGAME, new BoardController(this.board, this.state));
+	    this.controllers.put(StateValue.RESUME, new ResumeController(this.board, this.state));
+	    this.controllers.put(StateValue.EXIT, null);
 	}
 	
-	public void addAndProcess(ProposedCombination proposedCombination) {
-		this.boardController.addAndProcess(proposedCombination);
-	}
-	
-	public boolean isFinished() {
-		return this.boardController.isFinished();
-	}
-
-	public boolean isWinner() {
-		return this.boardController.isWinner();
-	}
-
-	public boolean isLoser() {
-		return this.boardController.isLoser();
-	}
-
-	public SecretCombination getSecretCombination() {
-		return this.boardController.getSecretCombination();
-	}
-
-	public int getActualIntent() {
-		return this.boardController.getActualIntent();
-	}
-
-	public ProposedCombination getProposedCombination(int i) {
-		return this.boardController.getProposedCombination(i);
-	}
-	
-	public Result getResult(int i) {
-		return this.boardController.getResult(i);
-	}
-	
-	public void resume() {
-		this.resumeController.resume();;
-	}
+	public Controller getController() {
+	    return this.controllers.get(this.state.getValueState());
+	  }
 
 }
 

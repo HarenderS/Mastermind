@@ -3,6 +3,7 @@ package Mastermind.Mastermind.Views.graphics;
 import javax.swing.JOptionPane;
 
 import Mastermind.Mastermind.Views.Message;
+import Mastermind.Mastermind.controllers.ResumeController;
 
 public class ResumeView {
 
@@ -13,7 +14,10 @@ public class ResumeView {
 				Message.TITLE.getMessage(), JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
 	}
 
-	public boolean isResumedGame() {
+	public boolean isResumedGame(ResumeController resumeController) {
+		if (!this.newGame) {
+			resumeController.nextState();
+		}
 		return this.newGame;
 	}
 }

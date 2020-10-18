@@ -1,40 +1,39 @@
 package Mastermind.Mastermind.Views.console;
 
 import Mastermind.Mastermind.Views.Message;
-import Mastermind.Mastermind.controllers.MainController;
+import Mastermind.Mastermind.controllers.BoardController;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.utils.Console;
 
-public class BoardView extends SubView {
+public class BoardView {
 
-	public BoardView(MainController mainController) {
-		super(mainController);
+	public BoardView() {
 	}
 
-	public void play() {
+	public void play(BoardController boardController) {
 		ProposedCombination proposedCombination;
-		do {
-			proposedCombination = new ProposedCombination();
-			ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombination);
-			Console.instance().writeln();
-			Message.ATTEMPED.writeln(this.mainController.getActualIntent() + 1);
-			proposedCombinationView.readCombination();
-			this.mainController.addAndProcess(proposedCombination);
-			for (int i = 0; i < this.mainController.getActualIntent(); i++) {
-				new ProposedCombinationView(this.mainController.getProposedCombination(i)).write();
-				new ResultView(this.mainController.getResult(i)).writeln();
+		proposedCombination = new ProposedCombination();
+		ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombination);
+		Console.instance().writeln();
+		Message.ATTEMPED.writeln(boardController.getActualIntent() + 1);
+		proposedCombinationView.readCombination();
+		boardController.addAndProcess(proposedCombination);
+		if (boardController.isFinished()) {
+			boardController.nextState();
+		} else {
+			for (int i = 0; i < boardController.getActualIntent(); i++) {
+				new ProposedCombinationView(boardController.getProposedCombination(i)).write();
+				new ResultView(boardController.getResult(i)).writeln();
 			}
-		} while (!this.mainController.isFinished());
+		}
 
-		if (this.mainController.isWinner()) {
-			Message.WINNER.writeln(this.mainController.getSecretCombination().toString(),
-					proposedCombination.toString());
+		if (boardController.isWinner()) {
+			Message.WINNER.writeln(boardController.getSecretCombination().toString(), proposedCombination.toString());
 			return;
 		}
 
-		if (this.mainController.isLoser()) {
-			Message.WINNER.writeln(this.mainController.getSecretCombination().toString(),
-					proposedCombination.toString());
+		if (boardController.isLoser()) {
+			Message.WINNER.writeln(boardController.getSecretCombination().toString(), proposedCombination.toString());
 			return;
 		}
 
