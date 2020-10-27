@@ -15,9 +15,7 @@ public class ResumeView {
 	}
 
 	public boolean isResumedGame(ResumeController resumeController) {
-		if (!this.newGame) {
-			resumeController.nextState();
-		}
+		resumeController.resume(this.newGame);
 		return this.newGame;
 	}
 }

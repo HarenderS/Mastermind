@@ -9,9 +9,12 @@ public enum Message {
 	WINNER("You've won!!! \n Secret id: #secrets -> your's: #proposel \n"), 
 	LOOSER("You've lost!!! \n Secret id: #secrets -> your's: #proposel \n"), 
 	SECRET("****"), 
-	ATTEMPED("Actual intent is: #attempts"),
+	ATTEMPED("Intent : #attempts -> "),
 	RESULT(" --> #blacks blacks and #whites whites"), 
-	PROPOSED_COMBINATION("Please enter your proposel (ej: for (red,blue,yellow,green) put 'rbyg': ");
+	PROPOSED_COMBINATION("Please enter your proposel (ej: for (red,blue,yellow,green) put 'rbyg': "),
+	ACTION_COMMAND("Do a action"), 
+	UNDO_COMMAND("Undo previous action"), 
+	REDO_COMMAND("Redo previous action");
 	
 	private String message;
 
@@ -29,7 +32,7 @@ public enum Message {
 	
 	public void writeln(int attempts) {
 		assert this == Message.ATTEMPED;
-		Console.instance().writeln(this.message.replaceFirst("#attempts", ""+attempts));
+		Console.instance().write(this.message.replaceFirst("#attempts", ""+attempts));
 	}
 
 	public void writeln(String secrets, String proposel) {

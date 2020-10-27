@@ -1,8 +1,8 @@
 package Mastermind.Mastermind.Views;
 
-import Mastermind.Mastermind.controllers.Controller;
+import Mastermind.Mastermind.controllers.AcceptController;
 
 public abstract class MastermindView {
 
-	public abstract void interact(Controller controller);
+	public abstract void interact(AcceptController controller);
 }

@@ -12,11 +12,21 @@ public class Board {
 		this.reStartBoard();
 	}
 	
+	public Board(Board board) {
+		this();
+		assert board != null;
+		
+		this.secretCombination = board.secretCombination;
+		this.proposedCombination = board.proposedCombination;
+		this.results = board.results;
+		this.actualIntent = board.actualIntent;
+	}
+	
 	public void reStartBoard() {
 		this.secretCombination = new SecretCombination();
 		this.proposedCombination = new ProposedCombination[MAXINTENTS];
 		this.results = new Result[MAXINTENTS];
-		actualIntent = 0;
+		this.actualIntent = 0;
 	}
 
 	public void addAndProcess(ProposedCombination proposedCombination) {
@@ -51,6 +61,19 @@ public class Board {
 	
 	public Result getResult(int i) {
 		return this.results[i];
+	}
+
+	public Board copy() {
+		return new Board(this);
+	}
+
+	public void set(Board board) {
+		assert board != null;
+		
+		this.secretCombination = board.secretCombination;
+		this.proposedCombination = board.proposedCombination;
+		this.results = board.results;
+		this.actualIntent = board.actualIntent;		
 	}
 	
 }

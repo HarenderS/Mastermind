@@ -1,7 +1,7 @@
 package Mastermind.Mastermind.Views.graphics;
 
+import Mastermind.Mastermind.controllers.AcceptController;
 import Mastermind.Mastermind.controllers.BoardController;
-import Mastermind.Mastermind.controllers.Controller;
 import Mastermind.Mastermind.controllers.ControllerVisitor;
 import Mastermind.Mastermind.controllers.ResumeController;
 import Mastermind.Mastermind.controllers.StartController;
@@ -20,7 +20,7 @@ public class MastermindView extends Mastermind.Mastermind.Views.MastermindView i
 
 
 	@Override
-	public void interact(Controller controller) {
+	public void interact(AcceptController controller) {
 		controller.accept(this);
 	}
 

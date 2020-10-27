@@ -12,11 +12,7 @@ public class ResumeView{
 	
 	public boolean resume(ResumeController resumeController) {
 		boolean resume = new YesNoDialog().read(Message.RESUME.toString());
-		if (resume) {
-			resumeController.resume();
-		}else {
-			resumeController.nextState();
-		}
+		resumeController.resume(resume);
 		return resume;
 	}
 	

@@ -3,28 +3,25 @@ package Mastermind.Mastermind.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
-import Mastermind.Mastermind.models.Board;
-import Mastermind.Mastermind.models.State;
+import Mastermind.Mastermind.models.Session;
 import Mastermind.Mastermind.models.StateValue;
 
 public class MainController {
 
-	private Board board;
-	private State state;
-	private Map<StateValue, Controller> controllers;
+	private Session session;
+	private Map<StateValue, AcceptController> controllers;
 	
 	public MainController() {
-		this.board = new Board();
-		this.state = new State();
-		this.controllers = new HashMap<StateValue, Controller>();
-	    this.controllers.put(StateValue.STARTED, new StartController(this.board, this.state));
-	    this.controllers.put(StateValue.PLAYED, new BoardController(this.board, this.state));
-	    this.controllers.put(StateValue.FINISHED, new ResumeController(this.board, this.state));
+		this.session = new Session();
+		this.controllers = new HashMap<StateValue, AcceptController>();
+	    this.controllers.put(StateValue.STARTED, new StartController(this.session));
+	    this.controllers.put(StateValue.PLAYED, new BoardController(this.session));
+	    this.controllers.put(StateValue.FINISHED, new ResumeController(this.session));
 	    this.controllers.put(StateValue.EXIT, null);
 	}
 	
-	public Controller getController() {
-	    return this.controllers.get(this.state.getValueState());
+	public AcceptController getController() {
+	    return this.controllers.get(this.session.getValueState());
 	  }
 
 }

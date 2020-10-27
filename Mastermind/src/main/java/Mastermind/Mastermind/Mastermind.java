@@ -1,7 +1,7 @@
 package Mastermind.Mastermind;
 
 import Mastermind.Mastermind.Views.MastermindView;
-import Mastermind.Mastermind.controllers.Controller;
+import Mastermind.Mastermind.controllers.AcceptController;
 import Mastermind.Mastermind.controllers.MainController;
 
 public abstract class Mastermind {
@@ -17,7 +17,7 @@ public abstract class Mastermind {
 	protected abstract MastermindView createView();
 
 	protected void play() {
-		Controller controller;
+		AcceptController controller;
 		do {
             controller = this.mainController.getController();
             if (controller != null) {
