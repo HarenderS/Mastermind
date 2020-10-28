@@ -17,7 +17,7 @@ public class PlayCommand extends Command {
 		ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombination);
 		Message.ATTEMPED.writeln(boardController.getActualIntent() + 1);
 		proposedCombinationView.readCombination();
-		boardController.addAndProcess(proposedCombination);
+		this.boardController.addAndProcess(proposedCombination);
 
 	}
 
