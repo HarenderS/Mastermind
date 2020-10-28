@@ -15,18 +15,18 @@
 - [Vista de Procesos](#Vista-de-Procesos)
 
 ## Requisitos
-- Funcionalidad: Básica + undo/redo
-- Interfaz: Gráfica y Texto         
-- Distribución: Standalone  
-- Persistencia: No     
+- Funcionalidad: **Básica + undo/redo**
+- Interfaz: **Gráfica y Texto**
+- Distribución: **Standalone**  
+- Persistencia: **No**
 
 ![mastermaind](/Mastermind/Documentation/mvp.pm.withComposite/mastermind.jpeg)
 
 ## Vista de Lógica/Diseño
-- Modelo/Vista/Presentador con Presentador del Modelo con Vista Achicada
-  - Patrón Command, para el menú
-  - Patrón Composite, para multi-controladores
-  - Patrón Memento, para la funcionalidad undo/redo
+- **Modelo/Vista/Presentador** con **Presentador del Modelo** con **Vista Achicada**
+  - **Patrón Command**, para el menú
+  - **Patrón Composite**, para multi-controladores
+  - **Patrón Memento**, para la funcionalidad undo/redo
 
 ### Arquitectura
 ![Arquitectura](/Mastermind/Documentation/mvp.pm.withComposite/Arquitectura.PNG)
