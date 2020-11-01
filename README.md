@@ -9,6 +9,7 @@
   - [Paquete mastermind.controllers](#Paquete-Mastermindcontrollers)
   - [Paquete mastermind.views](#Paquete-Mastermindviews)
   - [Paquete mastermind.views.console](#Paquete-Mastermindviewsconsole)
+  - [Paquete Mastermind.controllers.implementation](#Paquete-Mastermindcontrollersimplementation)
   - [Paquete Mastermind.distributed](#PaqueteMasterminddistributed)
   - [Paquete Mastermind.distributed.dispatchers](#Paquete-Masterminddistributeddispatchers)
   - [Paquete M.d.dispatchers.startAndResumeDispatcher](#Paquete-MddispatchersstartAndResumeDispatcher)
@@ -29,6 +30,7 @@
 
 ## Vista de Lógica/Diseño
 - **Modelo/Vista/Presentador** con **Presentador del Modelo** con **Vista Achicada**
+  - **Proxy**, para la ejecución distribuida
 
 ### Arquitectura
 ![Arquitectura](/Mastermind/Documentation/Arquitectura.PNG)
@@ -47,6 +49,9 @@
 
 ### Paquete Mastermind.views.console
 ![PaquetesViewConsole](/Mastermind/Documentation/paqueteViewConsole.PNG)
+
+### Paquete Mastermind.controllers.implementation
+![PaqueteMastermindControllersImplementation](/Mastermind/Documentation/paqueteControllersImplementation.PNG)
 
 ### Paquete Mastermind.distributed
 ![PaquetesMastermindDistributed](/Mastermind/Documentation/paqueteDistributed.png)
