@@ -1,6 +1,7 @@
 package Mastermind.Mastermind.Views;
 
 import Mastermind.Mastermind.models.Error;
+import Mastermind.utils.Console;
 
 public class ErrorView {
 
@@ -16,5 +17,9 @@ public class ErrorView {
 		this.error = error;
 	}
 	
-	
+	public void writeln() {
+		if (!error.isNull()){
+			Console.instance().writeln(ErrorView.ERRORMESSAGE[this.error.ordinal()]);
+		}
+	}
 }

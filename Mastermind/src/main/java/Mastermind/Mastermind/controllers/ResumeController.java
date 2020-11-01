@@ -1,22 +1,25 @@
 package Mastermind.Mastermind.controllers;
 
-import Mastermind.Mastermind.models.Board;
-import Mastermind.Mastermind.models.State;
+import Mastermind.Mastermind.Views.ResumeView;
+import Mastermind.Mastermind.models.Session;
 
 public class ResumeController extends Controller {
 
-	public ResumeController(Board board, State state) {
-		super(board, state);
+	public ResumeController(Session session) {
+		super(session);
 	}
 
-	public void resume() {
-		this.board.reStartBoard();
-		this.state.reset();
+	public void resume(boolean resume) {
+		if (resume) {
+			this.session.reset();
+		}else {
+			this.session.nextState();
+		}
 	}
 
 	@Override
-	public void accept(ControllerVisitor controllerVisitor) {
-		controllerVisitor.visit(this);
+	public void control() {
+		this.resume(new ResumeView().read());
 	}
 
 }

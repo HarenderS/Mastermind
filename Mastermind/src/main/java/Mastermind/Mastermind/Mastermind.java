@@ -1,29 +1,41 @@
 package Mastermind.Mastermind;
 
-import Mastermind.Mastermind.Views.MastermindView;
+import java.util.HashMap;
+import java.util.Map;
+
 import Mastermind.Mastermind.controllers.Controller;
-import Mastermind.Mastermind.controllers.MainController;
+import Mastermind.Mastermind.controllers.PlayController;
+import Mastermind.Mastermind.controllers.ResumeController;
+import Mastermind.Mastermind.controllers.StartController;
+import Mastermind.Mastermind.models.Session;
+import Mastermind.Mastermind.models.StateValue;
 
-public abstract class Mastermind {
+public class Mastermind {
 
-	private MainController mainController;
-	private MastermindView mastermindView;
-
-	protected Mastermind() {
-		this.mainController = new MainController();
-		this.mastermindView = this.createView();
+	private Session session;
+	private Map<StateValue, Controller> controllers;
+	
+	public Mastermind() {
+		this.session = new Session();
+		this.controllers = new HashMap<StateValue, Controller>();
+	    this.controllers.put(StateValue.STARTED, new StartController(this.session));
+	    this.controllers.put(StateValue.PLAYED, new PlayController(this.session));
+	    this.controllers.put(StateValue.FINISHED, new ResumeController(this.session));
+	    this.controllers.put(StateValue.EXIT, null);
 	}
-
-	protected abstract MastermindView createView();
 
 	protected void play() {
 		Controller controller;
 		do {
-            controller = this.mainController.getController();
+            controller = this.controllers.get(this.session.getValueState());
             if (controller != null) {
-                this.mastermindView.interact(controller);
+            	controller.control();
             }
 		} while (controller != null);
     }
+	
+	public static void main(String[] args) {
+		new Mastermind().play();
+	}
 
 }

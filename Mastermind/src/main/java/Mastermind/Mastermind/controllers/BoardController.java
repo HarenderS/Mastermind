@@ -1,52 +1,47 @@
 package Mastermind.Mastermind.controllers;
 
-import Mastermind.Mastermind.models.Board;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.Mastermind.models.Result;
 import Mastermind.Mastermind.models.SecretCombination;
-import Mastermind.Mastermind.models.State;
+import Mastermind.Mastermind.models.Session;
 
-public class BoardController extends Controller{
+public class BoardController{
 
-	public BoardController(Board board, State state) {
-		super(board, state);
+	private Session session;
+	public BoardController(Session session) {
+		this.session = session;
 	}
 	
 	public void addAndProcess(ProposedCombination proposedCombination) {
-		this.board.addAndProcess(proposedCombination);
+		this.session.addAndProcess(proposedCombination);
 	}
 	
 	public boolean isFinished() {
-		return this.board.isFinished();
+		return this.session.isFinished();
 	}
 
 	public boolean isWinner() {
-		return this.board.isWinner();
+		return this.session.isWinner();
 	}
 
 	public boolean isLoser() {
-		return this.board.isLoser();
+		return this.session.isLoser();
 	}
 
 	public SecretCombination getSecretCombination() {
-		return this.board.getSecretCombination();
+		return this.session.getSecretCombination();
 	}
 
 	public int getActualIntent() {
-		return this.board.getActualIntent();
+		return this.session.getActualIntent();
 	}
 
 	public ProposedCombination getProposedCombination(int i) {
-		return this.board.getProposedCombination(i);
+		return this.session.getProposedCombination(i);
 	}
 	
 	public Result getResult(int i) {
-		return this.board.getResult(i);
-	}
-
-	@Override
-	public void accept(ControllerVisitor controllerVisitor) {
-		controllerVisitor.visit(this);
+		return this.session.getResult(i);
 	}
 
 }

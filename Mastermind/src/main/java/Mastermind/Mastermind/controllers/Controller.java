@@ -1,21 +1,18 @@
 package Mastermind.Mastermind.controllers;
 
-import Mastermind.Mastermind.models.Board;
-import Mastermind.Mastermind.models.State;
+import Mastermind.Mastermind.models.Session;
 
 public abstract class Controller {
 
-	protected Board board;
-	protected State state;
+	protected Session session;
 	
-	public Controller(Board board, State state) {
-		this.board = board;
-		this.state = state;
+	public Controller(Session session) {
+		this.session = session;
 	}
 	
 	public void nextState() {
-		this.state.next();
+		this.session.nextState();
 	}
 	
-	public abstract void accept(ControllerVisitor controllerVisitor);
+	public abstract void control();
 }
