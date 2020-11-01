@@ -25,7 +25,7 @@
 - Distribución: **Standalone**  
 - Persistencia: **No**
 
-![mastermaind](/Mastermind/Documentation/mvp.pm.withComposite/mastermind.jpeg)
+![mastermaind](/Mastermind/Documentation/mastermind.jpeg)
 
 ## Vista de Lógica/Diseño
 - **Modelo/Vista/Presentador** con **Presentador del Modelo** con **Vista Achicada**
