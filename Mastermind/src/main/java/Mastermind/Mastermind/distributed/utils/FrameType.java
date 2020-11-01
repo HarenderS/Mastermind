@@ -17,7 +17,6 @@ public enum FrameType {
 	RESULT,
 	ERRORS_PUT,
 	PUT,
-	CONTINUE_STATE,
 	NEW_GAME;
 
 	public static FrameType parser(String string) {

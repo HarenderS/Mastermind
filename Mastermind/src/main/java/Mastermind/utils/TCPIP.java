@@ -64,11 +64,6 @@ public class TCPIP {
 		this.out.flush();
 	}
 	
-//	public void send(Object value) {
-//		this.out.println(value);
-//		this.out.flush();
-//	}
-
 	public void send(int value) {
 		this.send("" + value);
 	}
@@ -91,17 +86,6 @@ public class TCPIP {
 		return result;
 	}
 	
-//	public Object receiveObject() {
-//		Object result = null;
-//		try {
-//			result = this.in.readLine();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return result;
-//	}
-
 	public boolean receiveBoolean() {
 		boolean result = false;
 		try {

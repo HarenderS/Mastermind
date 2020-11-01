@@ -3,10 +3,6 @@ package Mastermind.Mastermind.distributed.utils;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import Mastermind.Mastermind.models.Error;
-import Mastermind.Mastermind.models.ProposedCombination;
-import Mastermind.Mastermind.models.Result;
-import Mastermind.Mastermind.models.SecretCombination;
 
 public class TCPIP extends Mastermind.utils.TCPIP{
 
@@ -42,64 +38,6 @@ public class TCPIP extends Mastermind.utils.TCPIP{
 			return null;
 		}
 	}
-
-	public void send(Error value) {
-		if (value == null) {
-			this.send("null");
-		}else {
-			this.send(value.name());
-		}
-	}
-	
-	public Error receiveError() {
-		String error = this.receiveLine();
-		if (error.equals("null")) {
-			return null;
-		}
-		return Error.valueOf(error);
-	}
-	
-//	public void send(ProposedCombination proposedCombination) {
-//		if (proposedCombination == null) {
-//			this.send("null");
-//		}else {
-//			this.send(proposedCombination);
-//		}
-//	}
-//	
-//	public ProposedCombination receiveProposel() {
-//		ProposedCombination proposel = (ProposedCombination) this.receiveObject();
-//		assert proposel != null;
-//		return proposel;
-//	}
-	
-//	public void send(SecretCombination secretCombination) {
-//		if (secretCombination == null) {
-//			this.send("null");
-//		}else {
-//			this.send(secretCombination);
-//		}
-//	}
-//
-//	public SecretCombination receiveSecret() {
-//		SecretCombination secret = (SecretCombination) this.receiveObject();
-//		assert secret != null;
-//		return secret;
-//	}	
-
-//	public void send(Result result) {
-//		if (result == null) {
-//			this.send("null");
-//		}else {
-//			this.send(result);
-//		}
-//	}
-	
-//	public Result receiveResult() {
-//		Result result = (Result) this.receiveObject();
-//		assert result != null;
-//		return result;
-//	}
 
 	public void close() {
 		this.send(FrameType.CLOSE.name());
