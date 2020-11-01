@@ -1,7 +1,16 @@
 package Mastermind.Mastermind.controllers;
 
-public interface AcceptController {
+import Mastermind.Mastermind.distributed.utils.TCPIP;
+import Mastermind.Mastermind.models.Session;
 
-	void accept(ControllerVisitor controllerVisitor);
+public abstract class AcceptController extends Controller{
+
+	protected TCPIP tcpip;
+    
+    public AcceptController(Session session, TCPIP tcpip) {
+		super(session);
+		this.tcpip = tcpip;
+	}
+	public abstract void accept(ControllerVisitor controllerVisitor);
 
 }

@@ -10,14 +10,14 @@ import Mastermind.Mastermind.Views.Message;
 import Mastermind.Mastermind.Views.console.ProposedCombinationView;
 import Mastermind.Mastermind.Views.console.ResultView;
 import Mastermind.Mastermind.controllers.BoardController;
-import Mastermind.Mastermind.controllers.MainController;
+import Mastermind.Mastermind.controllers.Logic;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.utils.Console;
 
 @SuppressWarnings("serial")
 public class BoardView extends JFrame {
 	
-	private MainController mainController;
+	private Logic mainController;
 	private final JLabel label;
 	private final JButton button;
 	private static final String SUBMIT = "Submit";

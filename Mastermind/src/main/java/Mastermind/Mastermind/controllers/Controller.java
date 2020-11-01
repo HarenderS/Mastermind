@@ -1,6 +1,7 @@
 package Mastermind.Mastermind.controllers;
 
 import Mastermind.Mastermind.models.Session;
+import Mastermind.Mastermind.models.StateValue;
 
 public abstract class Controller {
 
@@ -9,5 +10,9 @@ public abstract class Controller {
 	public Controller(Session session) {
 		this.session = session;
 	}
-	
+
+	public StateValue getValueState() {
+		return this.session.getValueState();
+	}
 }
+

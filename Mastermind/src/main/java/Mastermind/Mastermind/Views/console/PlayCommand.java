@@ -12,8 +12,7 @@ public class PlayCommand extends Command {
 
 	@Override
 	protected void execute() {
-		ProposedCombination proposedCombination;
-		proposedCombination = new ProposedCombination();
+		ProposedCombination proposedCombination = new ProposedCombination();
 		ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombination);
 		Message.ATTEMPED.writeln(boardController.getActualIntent() + 1);
 		proposedCombinationView.readCombination();

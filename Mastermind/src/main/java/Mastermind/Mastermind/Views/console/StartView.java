@@ -11,6 +11,6 @@ public class StartView {
 	public void start(StartController startController) {
 		Message.TITLE.writeln();
 		new SecretCombinationView().writeCoded();
-		startController.nextState();
+		startController.start();;
 	}
 }
