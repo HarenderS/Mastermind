@@ -66,6 +66,17 @@
 ### Paquete utils
 ![PaquetesUtils](/Mastermind/Documentation/paqueteUtils.PNG)
 
+## Calidad del Software
+- **Diseño**
+  - **Baja Cohesión**: de Lógica y Controladores que controlan y comunican
+  - **Alto Acoplamiento**: de Lógica y Controladores a tecnologías de comunicación
+  - **Open/Close**: en Lógica y Controladores cuando hay que cambiar el código de éstos con nuevas tecnologías de comunicación
+
+- **Rediseño**
+  - **Clases Grandes**: de Controladores con distintas ramas para distintas tecnologías de comunicación
+
+
+
 ## Vista de Desarrollo/Implementación
 ![DI](/Mastermind/Documentation/umlVD.PNG)
 ![DICliente](/Mastermind/Documentation/umlVDCliente.PNG)
