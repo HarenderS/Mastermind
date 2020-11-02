@@ -5,11 +5,9 @@
 - [Vista de Lógica/Diseño](#Vista-de-LógicaDiseño)
   - [Arquitectura](#Arquitectura)
   - [Paquetes Mastermind](#Paquetes-Mastermind)
+  - [Paquete mastermind.views](#Paquete-Mastermindviews)
   - [Paquete mastermind.models](#Paquete-Mastermindmodels)
   - [Paquete mastermind.controllers](#Paquete-Mastermindcontrollers)
-  - [Paquete mastermind.views](#Paquete-Mastermindviews)
-  - [Paquete mastermind.views.console](#Paquete-Mastermindviewsconsole)
-  - [Paquete mastermind.views.graphics](#Paquete-Mastermindviewsgraphics)
   - [Paquete utils](#Paquete-utils)
 - [Vista de Desarrollo/Implementación](#Vista-de-DesarrolloImplementación)
 - [Vista de Despliegue/Física](#Vista-de-DespliegueFísica)
@@ -21,41 +19,33 @@
 - Distribución: Standalone  
 - Persistencia: No     
 
-![mastermaind](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/mastermind.jpeg)
+![mastermaind](/Mastermind/Documentation/mastermind.jpeg)
 
 ## Vista de Lógica/Diseño
-- Modelo/Vista/Presentador con Presentador del Modelo con Vista Achicada
-
 
 ### Arquitectura
-![Arquitectura](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/Arquitectura.PNG)
+![Arquitectura](/Mastermind/Documentation/Arquitectura.PNG)
 
 ### Paquetes Mastermind
-![PaquetesM](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteMastermind.PNG)
-
-### Paquete Mastermind.models
-![PaquetesModel](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteModel.PNG)
-
-### Paquete Mastermind.controllers
-![PaquetesView](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteControllers.PNG)
+![PaquetesM](/Mastermind/Documentation/paqueteMastermind.PNG)
 
 ### Paquete Mastermind.views
-![PaquetesView](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteView.PNG)
+![PaquetesView](/Mastermind/Documentation/paqueteView.PNG)
 
-### Paquete Mastermind.views.console
-![PaquetesView](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteViewConsole.PNG)
+### Paquete Mastermind.models
+![PaquetesModel](/Mastermind/Documentation/paqueteModel.PNG)
 
-### Paquete Mastermind.views.graphics
-![PaquetesView](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteViewGraphics.PNG)
+### Paquete Mastermind.controllers
+![PaquetesView](/Mastermind/Documentation/paqueteControllers.PNG)
 
 ### Paquete utils
-![PaquetesUtils](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/paqueteUtils.PNG)
+![PaquetesUtils](/Mastermind/Documentation/paqueteUtils.PNG)
 
 ## Vista de Desarrollo/Implementación
-![DI](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/umlVD.PNG)
+![DI](/Mastermind/Documentation/umlVD.PNG)
 
 ## Vista de Despliegue/Física
-![DF](/Mastermind/Documentation/mvp.pm.withDoubleDispatching/umlDF.PNG)
+![DF](/Mastermind/Documentation/umlDF.PNG)
 
 ## Vista de Procesos
 - No hay concurrencia
