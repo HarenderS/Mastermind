@@ -2,6 +2,8 @@ package Mastermind.Mastermind.models;
 
 import java.util.List;
 
+import Mastermind.utils.Color;
+
 public class ProposedCombination extends Combination{
 
 	public boolean equals(Color color, int position) {

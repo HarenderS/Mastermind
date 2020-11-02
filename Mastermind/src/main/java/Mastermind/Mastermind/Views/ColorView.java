@@ -1,6 +1,6 @@
 package Mastermind.Mastermind.Views;
 
-import Mastermind.Mastermind.models.Color;
+import Mastermind.utils.Color;
 import Mastermind.utils.Console;
 
 public class ColorView {

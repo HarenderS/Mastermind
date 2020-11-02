@@ -1,7 +1,7 @@
 package Mastermind.Mastermind.Views;
 
-import Mastermind.Mastermind.models.Error;
 import Mastermind.utils.Console;
+import Mastermind.utils.Error;
 
 public class ErrorView {
 

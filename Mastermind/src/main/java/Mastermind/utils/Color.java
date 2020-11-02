@@ -1,4 +1,4 @@
-package Mastermind.Mastermind.models;
+package Mastermind.utils;
 
 public enum Color {
 

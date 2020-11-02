@@ -6,12 +6,12 @@ import Mastermind.Mastermind.Views.ErrorView;
 import Mastermind.Mastermind.Views.Message;
 import Mastermind.Mastermind.Views.ProposedCombinationView;
 import Mastermind.Mastermind.Views.ResultView;
-import Mastermind.Mastermind.models.Color;
-import Mastermind.Mastermind.models.Error;
 import Mastermind.Mastermind.models.ProposedCombination;
 import Mastermind.Mastermind.models.Result;
 import Mastermind.Mastermind.models.Session;
+import Mastermind.utils.Color;
 import Mastermind.utils.Console;
+import Mastermind.utils.Error;
 
 public class PlayController extends Controller {
 

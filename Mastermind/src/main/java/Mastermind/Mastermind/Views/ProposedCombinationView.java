@@ -2,7 +2,7 @@ package Mastermind.Mastermind.Views;
 
 import java.util.List;
 
-import Mastermind.Mastermind.models.Color;
+import Mastermind.utils.Color;
 
 public class ProposedCombinationView {
 
